@@ -9,13 +9,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    FragmentManager fm;
-    FragmentTransaction tran;
+    android.support.v4.app.FragmentManager fm;
+    android.support.v4.app.FragmentTransaction tran;
     PostFragment postFragment;
     MapFragment mapFragment;
     SearchFragment searchFragment;
     FreindFragment freindFragment;
-    SettingFragment settingFragment;
+    SetFragment settingFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         mapFragment = new MapFragment();
         searchFragment = new SearchFragment();
         freindFragment = new FreindFragment();
-        settingFragment = new SettingFragment();
+        settingFragment = new SetFragment();
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                fm = getFragmentManager();
+                fm = getSupportFragmentManager();
                 tran = fm.beginTransaction();
                 switch (item.getItemId()) {
                     case R.id.action_post:

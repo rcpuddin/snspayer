@@ -6,7 +6,7 @@
     android:fillViewport="true"
     tools:context=".SettingFragment">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/setting_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
